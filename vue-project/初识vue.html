@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+        <h1>Hello {{name1}}</h1> 
+        <!-- 双花括号里面的值必须符合js语法，不能用其他的语法结构 -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        Vue.config.productionTip = false;//关闭提示信息
+/*         初识vue:Vue想让vue工作，就必须创建一个vue实例，而且要传入一个配置对象；
+        root容器里面得到代码依然符合html规范，只不过混入了一些特殊的vue语法；
+        root容器里的代码被称为【Vue模板】； */
+
+        // 创建Vue实例
+         new Vue({
+            el: '#root', // 指定挂载的元素,等同于document.getElementById('root')
+            data:{// 定义数据
+                name1: 'yudan'
+            }
+        })
+    </script>
+</body>
+</html>
